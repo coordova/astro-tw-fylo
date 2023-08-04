@@ -1,0 +1,21 @@
+---
+// component imports
+import MainHead from "./MainHead.astro";
+
+// styles
+import "../css/style.css";
+
+// props for title & description
+const {
+	title = "Fylo Landing Page",
+	description = "My musings about AStro framework",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<MainHead {title} {description} />
+	<body class="dark:bg-darkBlue dark:text-white font-opensans h-screen">
+		<slot>Default Text</slot>
+	</body>
+</html>

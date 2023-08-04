@@ -1,0 +1,12 @@
+---
+// data imports
+import menu from "../data/nav.js";
+---
+
+<div class="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10">
+    {
+        menu.map(item => (
+            <a href={item.path} class="hover:text-accentCyan">{item.name}</a>
+        ))
+    }
+</div>
