@@ -30,8 +30,8 @@ module.exports = {
 		  backgroundImage: ['dark'],
 		},
 	},
-	plugins: [require("daisyui")],
-	/* daisyui: {
+	/* plugins: [require("daisyui")],
+	daisyui: {
 		themes: ['light', 'dark'],
 	}, */
 }
