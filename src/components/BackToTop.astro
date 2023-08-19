@@ -1,0 +1,39 @@
+---
+
+---
+
+<!-- Javascript code -->
+<script>
+    var toTopButton = document.getElementById("to-top-button");
+
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            toTopButton.classList.remove("hidden");
+        } else {
+            toTopButton.classList.add("hidden");
+        }
+    }
+
+    // When the user clicks on the button, smoothy scroll to the top of the document
+    /*function goToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }*/
+
+    toTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+<div>
+    <!-- Implement the Back Top Top Button -->
+    <button id="to-top-button"  title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500">
+        <div class="flex justify-center items-center">
+            <svg class="w-8 h-8 stroke-2  stroke-white " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+            </svg>
+
+            <!--<svg class="stroke-2 stroke-amber-300 fill-amber-300" enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z" fill="#515151"/></svg>-->
+        </div>
+    </button>
+</div>

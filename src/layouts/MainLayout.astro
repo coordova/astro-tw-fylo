@@ -5,11 +5,14 @@ import MainHead from "./MainHead.astro";
 // styles
 import "../css/style.css";
 
+// import "../css/vendor/aos/aos.css";
+
 // props for title & description
 const {
 	title = "Fylo Landing Page",
 	description = "My musings about AStro framework",
 } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -17,5 +20,13 @@ const {
 	<MainHead {title} {description} />
 	<body class="dark:bg-darkBlue dark:text-white font-opensans h-screen">
 		<slot>Default Text</slot>
+
+		<!-- Vendor JS Files -->
+		<!--<script src="../css/vendor/aos/aos.js"></script>-->
+		<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>-->
+		<script src="../js/main.js"></script>
 	</body>
 </html>
